@@ -1,3 +1,9 @@
 body {
   margin: 0;
+  height: 100vh;
+}
+
+.happy {
+  width: 200px;
+  height: 400px;
 }
