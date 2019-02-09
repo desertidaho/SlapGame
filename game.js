@@ -191,7 +191,7 @@ function update() {
 let isGameOver = setInterval(function gameOver() {
   if (target.health == 0)
     $('#gameOver').modal('show')
-}, 2000);
+}, 1700);
 
 function playAgain() {
   location.reload();
