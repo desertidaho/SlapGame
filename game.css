@@ -17,10 +17,13 @@ body {
   border: 1px solid rgb(53, 52, 52);
 }
 
+.progress {
+  width: 25vw;
+}
+
 .panda {
   width: 200px;
   height: 300px;
-
 }
 
 .img-margin {
