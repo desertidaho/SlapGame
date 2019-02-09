@@ -26,3 +26,11 @@ body {
 .img-margin {
   margin-top: 20vh;
 }
+
+.my-modal {
+  position: absolute;
+}
+
+.modal {
+  position: relative;
+}
