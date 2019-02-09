@@ -1,6 +1,6 @@
 ## The Slap Object Game - Part 2
 
-### Step 1 - The Target Object
+x### Step 1 - The Target Object
 So at this point you have a mostly functional slap game, however its time to refactor and clean up a few problems that could exist. First of all you have a global variable called `health` which is currently being used to control the state of the application. 
 
 To illustrate the problem with a global variable imagine for a moment you are playing an old arcade fighting game. Chances are you have at least two players. Now with just two players it might be easy enough to create two global variable and functions for `player1` and `player2` but what if we are actually playing a game like 
@@ -57,7 +57,7 @@ Now work on converting your global variables to properties that can be used thro
 
 Get your code back up and working with this new object
 
-### Step 2 - Items (2pts)
+x### Step 2 - Items (2pts)
 - It's now time to add items to our game. Items are objects that will be created to allow modifications to our attacks.
   The items are responsible for reducing or increasing the damage done to the target on hit.
 1. The Item should have 3 properties: name, modifier, description.
@@ -75,8 +75,8 @@ var fire = {
 - Since our game will have multiple items, we need to find an easy way to access them. 
  We can use an array to store a collection of objects. However, arrays are not always the easiest to use, because they require us
  to loop over the entire collection when we are looking for a specific item. What if we instead, create an object that uses the name of the item as a property (for more on this topic, review the <a href="http://bcw-cheatsheets.herokuapp.com/cheatsheets/1">dictionaries</a> cheetsheet)?
-1. Create an object called items.
-2. Following the example below, add 2 more items.
+x1. Create an object called items.
+x2. Following the example below, add 2 more items.
 
 ```javascript
 var items = {
@@ -101,10 +101,10 @@ var ryu = {
   items:[]
 ``` 
 
-2. Keep in mind that the \[items] object that is global, is completly different than the \[items] array on the target.
-3. Now write a function (something like giveFire()) that will push an item from the global items object into the items array on the target.
+x2. Keep in mind that the \[items] object that is global, is completly different than the \[items] array on the target.
+x3. Now write a function (something like giveFire()) that will push an item from the global items object into the items array on the target.
  
-### Step 5 - REDUCE THE DAMAGE!... almost
+x### Step 5 - REDUCE THE DAMAGE!... almost
 - How are you at math?
 1. Create a function that will be called, addMods().
 2. Using a "for loop", calculate the combined value of modifiers in the target.items array.
@@ -129,9 +129,9 @@ target.health -= damage + addMods();
 ```
 
 ### Step 7 - Let the user select the Items.
-- Add a div in the body with an id="items" and put a button for each item
-- Write a function that will allow the user to click each button and giveItem("item") to the target
-- This shouldn't move the items from the items object but make a copy of them in the target.items array.
+x- Add a div in the body with an id="items" and put a button for each item
+x- Write a function that will allow the user to click each button and giveItem("item") to the target
+x- This shouldn't move the items from the items object but make a copy of them in the target.items array.
 
  #### Lastly make your game pretty, this might be in your portfolio so add a background, move things around with bootstrap etc. 
 

@@ -19,7 +19,7 @@
 		<header class="mt-3">
 			<div class="row">
 				<div class="col d-flex justify-content-center">
-					<h1>SLAPGAME</h1>
+					<h1>SlapGame</h1>
 				</div>
 			</div>
 			<div class="row mt-3">
@@ -33,16 +33,23 @@
 		</header>
 
 
-		<main class="row mt-5">
-			<div class="col d-flex justify-content-center">
-				<img class="happy" id="happy-target" src="img/happy.png" alt="">
-
+		<main class="mt-5">
+			<div class="row">
+				<div class="col d-flex justify-content-center">
+					<img class="happy" id="happy-target" src="img/happy.png" alt="">
+				</div>
 			</div>
-
+			<div class="row">
+				<div class="col-4 offset-4 d-flex justify-content-around" id="items">
+					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="stick()">Stick</button>
+					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="stone()">Stones</button>
+					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="word()">Words</button>
+				</div>
+			</div>
 		</main>
 
 
-		<footer class="row mt-5">
+		<footer class="row mt-2">
 			<div class="col-4 offset-4 d-flex justify-content-around">
 				<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="slap()">Slap</button>
 				<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="punch()">Punch</button>
