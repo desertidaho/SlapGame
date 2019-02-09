@@ -9,17 +9,17 @@ let target = {
 
 let items = {
   firework: {
-    name: 'Firework',
+    name: 'firework',
     modifier: 3,
     description: 'That\'s hot, ouch!'
   },
   ninjaStar: {
-    name: 'Ninja Star',
+    name: 'ninjaStar',
     modifier: 5,
     description: 'Yikes, that\'s sharp, double ouch!'
   },
   noodles: {
-    name: 'Noodles',
+    name: 'noodles',
     modifier: 10,
     description: 'Yummy, noodle soup. Yay, more power.'
   }
@@ -56,15 +56,45 @@ function attack(type) {
       target.health--;
       document.getElementById('attackImg').setAttribute("style", "display: block")
       document.getElementById('attackImg').setAttribute("src", "img/slap.png")
+      if (target.items.length > 0) {
+        if (target.items[0].name == 'firework') {
+          document.getElementById('attackMods').setAttribute("style", "display: block")
+          document.getElementById('attackMods').setAttribute("src", "img/firework.png")
+        }
+        if (target.items[0].name == 'ninjaStar') {
+          document.getElementById('attackMods').setAttribute("style", "display: block")
+          document.getElementById('attackMods').setAttribute("src", "img/ninja-star.png")
+        }
+      }
     } else if (type == 'punch') {
       target.health -= 5;
       document.getElementById('attackImg').setAttribute("style", "display: block")
       document.getElementById('attackImg').setAttribute("src", "img/punch.png")
+      if (target.items.length > 0) {
+        if (target.items[0].name == 'firework') {
+          document.getElementById('attackMods').setAttribute("style", "display: block")
+          document.getElementById('attackMods').setAttribute("src", "img/firework.png")
+        }
+        if (target.items[0].name == 'ninjaStar') {
+          document.getElementById('attackMods').setAttribute("style", "display: block")
+          document.getElementById('attackMods').setAttribute("src", "img/ninja-star.png")
+        }
+      }
     } else {
       if (target.health >= 10) {
         target.health -= 10;
         document.getElementById('attackImg').setAttribute("style", "display: block")
         document.getElementById('attackImg').setAttribute("src", "img/kick.png")
+        if (target.items.length > 0) {
+          if (target.items[0].name == 'firework') {
+            document.getElementById('attackMods').setAttribute("style", "display: block")
+            document.getElementById('attackMods').setAttribute("src", "img/firework.png")
+          }
+          if (target.items[0].name == 'ninjaStar') {
+            document.getElementById('attackMods').setAttribute("style", "display: block")
+            document.getElementById('attackMods').setAttribute("src", "img/ninja-star.png")
+          }
+        }
       }
     }
   }
@@ -77,11 +107,25 @@ function update() {
   document.getElementById('progress').style.width = target.health + '%';
   document.getElementById('hits').innerText = target.hits.toString();
 
+  //change panda picture
+  if (target.health < 100) {
+    document.getElementById('pandaTarget').setAttribute("src", "img/panda-healthy.png")
+  }
+  if (target.health < 70) {
+    document.getElementById('pandaTarget').setAttribute("src", "img/panda-block1.png")
+  }
+  if (target.health < 30) {
+    document.getElementById('pandaTarget').setAttribute("src", "img/panda-block2.png")
+  }
+  if (target.health < 1) {
+    document.getElementById('pandaTarget').setAttribute("src", "img/panda-defeated.png")
+  }
+
   //remove attack image after delay
   setTimeout(function flashAttackImg() {
     document.getElementById('attackImg').setAttribute("style", "display: none")
+    document.getElementById('attackMods').setAttribute("style", "display: none")
   }, 400);
-
 
   //attack buttons enabled/disabled logic
   if (target.health >= 1) {
@@ -120,7 +164,7 @@ function update() {
 let isGameOver = setInterval(function gameOver() {
   if (target.health == 0)
     $('#gameOver').modal('show')
-}, 1500);
+}, 2000);
 
 function playAgain() {
   location.reload();

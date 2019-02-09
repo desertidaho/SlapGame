@@ -29,7 +29,7 @@ body {
 .img-margin {
   position: relative;
   z-index: 1;
-  margin-top: 20vh;
+  margin-top: 22vh;
 }
 
 #attackImg {
@@ -37,6 +37,15 @@ body {
   z-index: 2;
   margin-top: -8vh;
   margin-left: 2vw;
+  height: 200px;
+  display: none;
+}
+
+#attackMods {
+  position: absolute;
+  z-index: 2;
+  margin-top: -8vh;
+  margin-left: -12vw;
   height: 200px;
   display: none;
 }
