@@ -27,7 +27,18 @@ body {
 }
 
 .img-margin {
+  position: relative;
+  z-index: 1;
   margin-top: 20vh;
+}
+
+#attackImg {
+  position: absolute;
+  z-index: 2;
+  margin-top: -8vh;
+  margin-left: 5vw;
+  height: 200px;
+  display: none;
 }
 
 .my-modal {

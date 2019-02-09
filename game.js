@@ -54,11 +54,17 @@ function attack(type) {
     target.hits++;
     if (type == 'slap') {
       target.health--;
+      document.getElementById('attackImg').setAttribute("style", "display: block")
+      document.getElementById('attackImg').setAttribute("src", "img/slap.png")
     } else if (type == 'punch') {
       target.health -= 5;
+      document.getElementById('attackImg').setAttribute("style", "display: block")
+      document.getElementById('attackImg').setAttribute("src", "img/punch.png")
     } else {
       if (target.health >= 10) {
         target.health -= 10;
+        document.getElementById('attackImg').setAttribute("style", "display: block")
+        document.getElementById('attackImg').setAttribute("src", "img/kick.png")
       }
     }
   }
@@ -70,6 +76,12 @@ function update() {
   document.getElementById('health').innerText = target.health.toString();
   document.getElementById('progress').style.width = target.health + '%';
   document.getElementById('hits').innerText = target.hits.toString();
+
+  //remove attack image after delay
+  setTimeout(function flashAttackImg() {
+    document.getElementById('attackImg').setAttribute("style", "display: none")
+  }, 400);
+
 
   //attack buttons enabled/disabled logic
   if (target.health >= 1) {
