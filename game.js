@@ -66,8 +66,9 @@ function attack(type) {
 }
 
 function update() {
-  //write health and hits to screen
+  //update health, progress bar, and hits to screen
   document.getElementById('health').innerText = target.health.toString();
+  document.getElementById('progress').style.width = target.health + '%';
   document.getElementById('hits').innerText = target.hits.toString();
 
   //attack buttons enabled/disabled logic
