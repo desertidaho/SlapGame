@@ -66,9 +66,11 @@ function attack(type) {
 }
 
 function update() {
+  //write health and hits to screen
   document.getElementById('health').innerText = target.health.toString();
   document.getElementById('hits').innerText = target.hits.toString();
 
+  //attack buttons enabled/disabled logic
   if (target.health >= 1) {
     document.getElementById('slap1').disabled = false;
   } else {
@@ -85,6 +87,7 @@ function update() {
     document.getElementById('kick10').disabled = true;
   }
 
+  //modifier buttons enabled/disabled logic
   document.getElementById('firework').disabled = false;
   document.getElementById('ninjaStar').disabled = false;
   if (target.health <= 90) {
@@ -92,11 +95,27 @@ function update() {
   } else {
     document.getElementById('noodles').disabled = true;
   }
+  if (target.health == 0) {
+    document.getElementById('noodles').disabled = true;
+  }
 
   total = 0;
   target.items = [];
 }
 
+//game over, replay, stop play
+let isGameOver = setInterval(function gameOver() {
+  if (target.health == 0)
+    $('#gameOver').modal('show')
+}, 2000);
+
+function playAgain() {
+  location.reload();
+}
+
+function endGame() {
+  clearInterval(isGameOver)
+}
 
 /*
 old code, refactored above
