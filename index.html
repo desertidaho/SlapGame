@@ -41,9 +41,9 @@
 			</div>
 			<div class="row">
 				<div class="col-4 offset-4 d-flex justify-content-around" id="items">
-					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="stick()">Stick</button>
-					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="stone()">Stones</button>
-					<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="word()">Words</button>
+					<button class="btn btn-lg btn-outline-dark shadow" id="stick-btn" onclick="modifier('sticks')">Stick -3</button>
+					<button class="btn btn-lg btn-outline-dark shadow" id="stone-btn" onclick="modifier('stones')">Stones -5</button>
+					<button class="btn btn-lg btn-outline-dark shadow" id="word-btn" disabled="true" onclick="word()">Words + 10</button>
 				</div>
 			</div>
 		</main>
@@ -51,9 +51,10 @@
 
 		<footer class="row mt-2">
 			<div class="col-4 offset-4 d-flex justify-content-around">
-				<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="slap()">Slap</button>
-				<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="punch()">Punch</button>
-				<button class="btn btn-lg btn-outline-dark shadow" id="" onclick="kick()">Kick</button>
+				<button class="btn btn-lg btn-outline-dark shadow" id="slap1" onclick="attack('slap')">Slap -1</button>
+				<button class="btn btn-lg btn-outline-dark shadow" id="punch5" onclick="attack('punch')">Punch -5</button>
+				<button class="btn btn-lg btn-outline-dark shadow" id="kick10" onclick="attack('kick')">Kick
+					-10</button>
 			</div>
 		</footer>
 
