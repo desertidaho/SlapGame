@@ -1,9 +1,23 @@
 body {
   margin: 0;
   height: 100vh;
+  background: url('img/scene.jpg');
+  background-size: cover;
+  overflow: hidden;
+  background-position-y: bottom;
 }
 
-.happy {
+.btn {
+  box-shadow: 1px 1px rgb(131, 130, 130);
+  border: 1px solid rgb(53, 52, 52);
+}
+
+.panda {
   width: 200px;
-  height: 400px;
+  height: 300px;
+
+}
+
+.img-margin {
+  margin-top: 20vh;
 }

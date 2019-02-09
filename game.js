@@ -1,41 +1,39 @@
 let total = 0;
 
 let target = {
-  name: 'happyStick',
+  name: 'Kung Fu Panda',
   health: 100,
   hits: 0,
   items: []
 }
 
 let items = {
-  sticks: {
-    name: 'Stick',
+  firework: {
+    name: 'Firework',
     modifier: 3,
-    description: 'Breaking bones, ouch!'
+    description: 'That\'s hot, ouch!'
   },
-  stones: {
-    name: 'Stone',
+  ninjaStar: {
+    name: 'Ninja Star',
     modifier: 5,
-    description: 'Breaking bones, double Ouch!'
+    description: 'Yikes, that\'s sharp, double ouch!'
   },
-  words: {
-    name: 'Words',
+  noodles: {
+    name: 'Noodles',
     modifier: 10,
-    description: 'Words will never hurt me. Yay, more power.'
+    description: 'Yummy noodle soup. Yay, more power.'
   }
 }
 
-function modifier(type) {
+function modifyItem(type) {
   if (target.items.length == 0) {
     target.items.push(items[type])
-    document.getElementById('stick-btn').disabled = true;
-    document.getElementById('stone-btn').disabled = true;
-  } else {
-
+    document.getElementById('firework').disabled = true;
+    document.getElementById('ninjaStar').disabled = true;
   }
 }
 
-function word() {
+function eat() {
   if (target.health <= 90) {
     target.health += 10;
   }
@@ -87,12 +85,12 @@ function update() {
     document.getElementById('kick10').disabled = true;
   }
 
-  document.getElementById('stick-btn').disabled = false;
-  document.getElementById('stone-btn').disabled = false;
+  document.getElementById('firework').disabled = false;
+  document.getElementById('ninjaStar').disabled = false;
   if (target.health <= 90) {
-    document.getElementById('word-btn').disabled = false;
+    document.getElementById('noodles').disabled = false;
   } else {
-    document.getElementById('word-btn').disabled = true;
+    document.getElementById('noodles').disabled = true;
   }
 
   total = 0;
