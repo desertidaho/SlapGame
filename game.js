@@ -31,12 +31,32 @@ function modifyItem(type) {
     document.getElementById('firework').disabled = true;
     document.getElementById('ninjaStar').disabled = true;
   }
+
+  //disable attack buttons if not enough health when combined with modifier
+  if (type == 'firework') {
+    if (target.health < 13) {
+      document.getElementById('kick10').disabled = true;
+    }
+    if (target.health < 8) {
+      document.getElementById('punch5').disabled = true;
+    }
+  }
+  if (type == 'ninjaStar') {
+    if (target.health < 15) {
+      document.getElementById('kick10').disabled = true;
+    }
+    if (target.health < 10) {
+      document.getElementById('punch5').disabled = true;
+    }
+  }
 }
 
 function eat() {
   if (target.health <= 90) {
     target.health += 10;
   }
+  document.getElementById('attackMods').setAttribute("style", "display: block")
+  document.getElementById('attackMods').setAttribute("src", "img/noodles.png")
   update()
 }
 
@@ -108,6 +128,9 @@ function update() {
   document.getElementById('hits').innerText = target.hits.toString();
 
   //change panda picture
+  if (target.health == 100) {
+    document.getElementById('pandaTarget').setAttribute("src", "img/panda-start.png")
+  }
   if (target.health < 100) {
     document.getElementById('pandaTarget').setAttribute("src", "img/panda-healthy.png")
   }
@@ -151,6 +174,10 @@ function update() {
     document.getElementById('noodles').disabled = false;
   } else {
     document.getElementById('noodles').disabled = true;
+  }
+  if (target.health < 4) {
+    document.getElementById('firework').disabled = true;
+    document.getElementById('ninjaStar').disabled = true;
   }
   if (target.health == 0) {
     document.getElementById('noodles').disabled = true;
