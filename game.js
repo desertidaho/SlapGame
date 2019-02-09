@@ -21,7 +21,7 @@ let items = {
   noodles: {
     name: 'Noodles',
     modifier: 10,
-    description: 'Yummy noodle soup. Yay, more power.'
+    description: 'Yummy, noodle soup. Yay, more power.'
   }
 }
 
