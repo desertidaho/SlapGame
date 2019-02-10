@@ -57,3 +57,16 @@ body {
 .modal {
   position: relative;
 }
+
+#tour1 {
+  margin-top: 32vh;
+  margin-left: 30vw;
+}
+
+#tour2 {
+  margin-left: -22vw;
+}
+
+.arrow {
+  margin-right: 15vw !important;
+}

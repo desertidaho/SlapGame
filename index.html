@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="game.css">
 </head>
 
-<body>
+<body onload="startModal()">
 	<div class="container-fluid">
 
 		<header class="mt-3">
@@ -40,14 +40,109 @@
 			</div>
 		</header>
 
-		<!-- Modal -->
+		<!-- start of game modal -->
+		<div class="row">
+			<div class="col my-modal">
+				<div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="">Welcome, brave warrior!</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>You are about to challenge <span class="modal-panda"> Karate Panda</span> to a fight. You should know that
+									he is a mighty panda and it will take all of your strength to defeat him. </p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark shadow" data-dismiss="modal">Skip tour</button>
+								<button type="button" class="btn btn-primary shadow" onclick="tour1()">Next</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- tour1 modal -->
+		<div class="row">
+			<div class="col my-modal">
+				<div class="modal fade" id="tour1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="">Attack buttons</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Each time you click a yellow attack button <span class="modal-panda"> Karate Panda's</span> health is reduced
+									by the
+									amount shown. However, I'm confident you will not have the strength to defeat the mighty big-bellied panda
+									warrior.
+								</p>
+							</div>
+							<div class="modal-footer">
+								<i class="fas fa-arrow-left arrow"></i>
+								<button type="button" class="btn btn-dark shadow" data-dismiss="modal">Skip tour</button>
+								<button type="button" class="btn btn-primary shadow" onclick="tour2()">Next</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- tour2 modal -->
+		<div class="row">
+			<div class="col my-modal">
+				<div class="modal fade" id="tour2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="">Modifier buttons</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Only the most ruthless warrior would choose to use the red attack enhancing items, which, once selected, are
+									added to the normal yellow attack buttons' strength.
+								</p>
+								<p>
+									Panda's love noodle soup. If <span class="modal-panda"> Karate Panda's</span> health is diminishing you are
+									encouraged
+									to feed him generously so that he might have the strenth to continue.
+								</p>
+								<p>
+									Good luck brave warrior, you will need it.
+								</p>
+							</div>
+							<div class="modal-footer">
+								<i class="fas fa-arrow-left arrow"></i>
+								<button type="button" class="btn btn-dark shadow" data-dismiss="modal">Skip tour</button>
+								<button type="button" class="btn btn-success shadow" data-dismiss="modal">Start game</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- end of game modal -->
 		<div class="row">
 			<div class="col my-modal">
 				<div class="modal fade" id="gameOver" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="">Game Over. <span class="modal-panda"> Karate Panda</span> has been defeated.</h5>
+								<h5 class="modal-title" id="">Game Over. <span class="modal-panda"> Karate Panda</span> has been defeated.
+								</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>

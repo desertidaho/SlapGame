@@ -187,6 +187,21 @@ function update() {
   target.items = [];
 }
 
+//start of game tour modals
+setTimeout(function startModal() {
+  $('#startModal').modal('show')
+}, 1500);
+
+function tour1() {
+  $('#startModal').modal('hide')
+  $('#tour1').modal('show')
+}
+
+function tour2() {
+  $('#tour1').modal('hide')
+  $('#tour2').modal('show')
+}
+
 //game over, replay, stop play
 let isGameOver = setInterval(function gameOver() {
   if (target.health == 0)
