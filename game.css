@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  height: 100vh;
+  height: 97.5vh;
   background: url('img/scene.jpg');
   background-size: cover;
-  overflow: hidden;
   background-position-y: bottom;
+  overflow: hidden;
 }
 
 .name,
@@ -29,7 +29,7 @@ body {
 .img-margin {
   position: relative;
   z-index: 1;
-  margin-top: 22vh;
+  margin-top: 20vh;
 }
 
 #attackImg {
@@ -68,5 +68,5 @@ body {
 }
 
 .arrow {
-  margin-right: 15vw !important;
+  margin-right: 13vw !important;
 }
