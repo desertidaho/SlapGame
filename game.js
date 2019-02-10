@@ -1,7 +1,7 @@
 let total = 0;
 
 let target = {
-  name: 'Kung Fu Panda',
+  name: 'Karate Panda',
   health: 100,
   hits: 0,
   items: []
@@ -190,7 +190,7 @@ function update() {
 //start of game tour modals
 setTimeout(function startModal() {
   $('#startModal').modal('show')
-}, 1500);
+}, 1700);
 
 function tour1() {
   $('#startModal').modal('hide')
