@@ -139,9 +139,11 @@ function update() {
   }
   if (target.health < 30) {
     document.getElementById('pandaTarget').setAttribute("src", "img/panda-block2.png")
+    document.getElementById('pandaTarget').setAttribute("style", "width: 240px")
   }
   if (target.health < 1) {
     document.getElementById('pandaTarget').setAttribute("src", "img/panda-defeated.png")
+    document.getElementById('pandaTarget').setAttribute("style", "margin-top: 2vh")
   }
 
   //remove attack image after delay
@@ -190,7 +192,7 @@ function update() {
 //start of game tour modals
 setTimeout(function startModal() {
   $('#startModal').modal('show')
-}, 1700);
+}, 2000);
 
 function tour1() {
   $('#startModal').modal('hide')
@@ -206,12 +208,18 @@ function tour2() {
 let isGameOver = setInterval(function gameOver() {
   if (target.health == 0)
     $('#gameOver').modal('show')
-}, 1700);
+}, 2000);
 
 function playAgain() {
-  location.reload();
+  location.reload()
 }
 
 function endGame() {
   clearInterval(isGameOver)
+}
+
+function restart() {
+  target.health = 100
+  target.hits = 0
+  update()
 }

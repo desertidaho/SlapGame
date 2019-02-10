@@ -1,6 +1,7 @@
+html,
 body {
   margin: 0;
-  height: 97.5vh;
+  height: 100vh;
   background: url('img/scene.jpg');
   background-size: cover;
   background-position-y: bottom;
@@ -23,13 +24,13 @@ body {
 
 .panda {
   width: 200px;
-  height: 300px;
+  height: 280px;
 }
 
 .img-margin {
   position: relative;
   z-index: 1;
-  margin-top: 20vh;
+  margin-top: 22vh;
 }
 
 #attackImg {
