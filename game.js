@@ -210,10 +210,6 @@ let isGameOver = setInterval(function gameOver() {
     $('#gameOver').modal('show')
 }, 2000);
 
-function playAgain() {
-  location.reload()
-}
-
 function endGame() {
   clearInterval(isGameOver)
 }
