@@ -221,5 +221,6 @@ function endGame() {
 function restart() {
   target.health = 100
   target.hits = 0
+  $('#gameOver').modal('hide')
   update()
 }
